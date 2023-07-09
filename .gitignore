@@ -1,0 +1,39 @@
+# .NET - Server folder
+
+# Build output
+Server/bin/
+Server/obj/
+
+# .NET Core artifacts
+Server/*.dll
+Server/*.exe
+Server/*.pdb
+Server/*.userprefs
+Server/*.launchSettings.json
+
+# Node.js - Client folder
+
+# Node.js dependencies
+Client/node_modules/
+
+# Angular - Client folder
+
+# Build output
+Client/dist/
+Client/dist-server/
+Client/coverage/
+
+# Angular artifacts
+Client/*.js
+Client/*.js.map
+Client/*.css
+Client/*.css.map
+Client/*.ico
+
+# Angular configuration files
+Client/environments/*.ts
+Client/environments/*.prod.ts
+
+
+# Angular cache files
+Client/.angular/cache
