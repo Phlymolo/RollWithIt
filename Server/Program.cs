@@ -30,7 +30,14 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapFallbackToFile("/index.html"); // serves index.html for all unmatched routes, ie lets angular handle page routing
 app.MapHub<Chathub>("/chatHub");
+
+// app.UseEndpoints(endpoints =>
+// {
+//     endpoints.MapControllers();
+//     endpoints.MapFallbackToFile("/index.html");
+// });
 
 app.UseHttpsRedirection();
 
