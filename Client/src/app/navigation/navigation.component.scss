@@ -1,0 +1,19 @@
+.tool-bar-container {
+    display: flex;
+    flex: 1;
+    align-items: baseline;
+}
+
+.tool-bar-left {
+    flex: 1;
+}
+
+.tool-bar-right {    
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}

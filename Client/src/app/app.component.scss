@@ -1,9 +1,17 @@
 .app-container {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    // height: 100vh;
-    // // gap:2rem;
-  
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+.toolbar {
+  /* No need to specify height here. It will adapt based on its content */
+}
+
+.content {
+  flex-grow: 1;
+  /* This will take up the remaining space in the flex container */
+  overflow-y: auto;
+  /* Allows scrolling if the content overflows */
+}

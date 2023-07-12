@@ -1,0 +1,32 @@
+<!-- nav bar -->
+
+<mat-toolbar color="primary">
+
+    <div class="tool-bar-container">
+
+        <div class="tool-bar-left">
+            <button mat-button routerLink="/dashboard">
+                Roll With It
+            </button>
+        </div>
+
+        <div class="tool-bar-right">
+
+            <div *ngIf="userService.userName; else loginButton" class="flex-align-center">
+                <mat-icon>person</mat-icon>
+                {{ userService.userName }}
+
+            </div>
+
+            <ng-template #loginButton>
+                <button mat-button routerLink="/login">
+                    Login
+                </button>
+            </ng-template>
+        </div>
+
+
+    </div>
+
+
+</mat-toolbar>
