@@ -6,21 +6,23 @@ import { UserDto } from '../models/user-dto.model';
 })
 export class UserService {
 
+  private isUserLoggedIn: boolean = false;
   public user: UserDto = { userName: '' };
 
   constructor() { }
 
   public login(userName: string): void {
     this.user = { userName: userName };
+    this.isUserLoggedIn = true;
   }
 
   public logout(): void {
     this.user = { userName: '' };
+    this.isUserLoggedIn = false;
   }
 
   public isLoggedIn(): boolean {
-    console.debug('isLoggedIn: ' + this.user.userName != '');
-    return this.user.userName != '';
+    return this.isUserLoggedIn;
   }
 
 
