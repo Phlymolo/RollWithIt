@@ -1,11 +1,11 @@
 {
-    "name": "my-app",
+    "name": "roll-with-it",
     "description": "a .NET and Angular app",
     "scripts": {
         "heroku-postbuild": "cd Client && npm install && npm run build --prod"
     },
     "engines": {
-        "node": "14.x",
+        "node": "16.x",
         "npm": "6.x"
     }
 }
