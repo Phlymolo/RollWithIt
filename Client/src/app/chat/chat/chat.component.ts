@@ -19,7 +19,7 @@ export class ChatComponent implements OnInit  {
   ngOnInit(): void {
     this.chatService.startConnection();
 
-    this.message.user = this.userService.userName;
+    this.message.user = this.userService.user.userName;
 
     this.chatService.messageReceived$.subscribe((message: MessageDto) => {
       this.messages.push(message);

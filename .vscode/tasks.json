@@ -2,40 +2,48 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/Server/Server.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
+            "label": "dotnet watch run",
+            "type": "shell",
+            "command": "dotnet watch run",
+            "options": {
+                "cwd": "${workspaceFolder}/Server"
+            },
+            "problemMatcher": [],
+            "isBackground": true,
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
         },
         {
-            "label": "publish",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "publish",
-                "${workspaceFolder}/Server/Server.csproj",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
-            ],
-            "problemMatcher": "$msCompile"
+            "label": "npm run watch",
+            "type": "shell",
+            "command": "npm run watch",
+            "options": {
+                "cwd": "${workspaceFolder}/Client"
+            },
+            "problemMatcher": [],
+            "isBackground": true,
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
         },
         {
-            "label": "watch",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "watch",
-                "run",
-                "--project",
-                "${workspaceFolder}/Server/Server.csproj"
+            "label": "Start App",
+            "dependsOn": [
+                "dotnet watch run",
+                "npm run watch"
             ],
-            "problemMatcher": "$msCompile"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
-    ]
+    ],
 }

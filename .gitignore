@@ -4,6 +4,9 @@
 Server/bin/
 Server/obj/
 
+# wwwroot
+Server/wwwroot/
+
 # .NET Core artifacts
 Server/*.dll
 Server/*.exe
