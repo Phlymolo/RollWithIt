@@ -25,6 +25,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { LobbyComponent } from './pages/lobby/lobby.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     LoginComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    NavigationComponent
+    NavigationComponent,
+    LobbyComponent
   ],
   imports: [
     BrowserModule,

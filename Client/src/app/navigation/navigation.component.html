@@ -12,9 +12,9 @@
 
         <div class="tool-bar-right">
 
-            <div *ngIf="userService.userName; else loginButton" class="flex-align-center">
+            <div *ngIf="userService.user.userName; else loginButton" class="flex-align-center">
                 <mat-icon>person</mat-icon>
-                {{ userService.userName }}
+                {{ userService.user.userName }}
 
             </div>
 

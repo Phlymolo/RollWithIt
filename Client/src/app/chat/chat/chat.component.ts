@@ -8,18 +8,18 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.scss']
 })
-export class ChatComponent implements OnInit  {
+export class ChatComponent implements OnInit {
 
   messages: MessageDto[] = [];
 
-  message: MessageDto = { user: '', text: '' };
+  message: MessageDto = { username: '', text: '' };
 
   constructor(private chatService: ChatService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.chatService.startConnection();
 
-    this.message.user = this.userService.userName;
+    this.message.username = this.userService.user.userName;
 
     this.chatService.messageReceived$.subscribe((message: MessageDto) => {
       this.messages.push(message);

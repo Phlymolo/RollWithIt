@@ -3,8 +3,7 @@
   flex-direction: column;
   height: 100%;
   gap: 1rem;
-  // padding: .5em;
-
+  
 }
 
 .chat-container {
@@ -12,13 +11,13 @@
   flex-direction: column;
   height: 100%;
   gap: 1rem;
-  padding: .5em;
-  border: 1px solid black;
+  padding: 1rem;
+  // border: 1px solid black;
 
 }
 
 .messages-container {
-  flex: 5;
+  flex: 1;
   border: 1px solid black;
 }
 
@@ -27,6 +26,7 @@
   flex-direction: row;
   gap: .5rem;
   height: 3rem;
+  // flex: 1;
 
   textarea {
     flex: 1;

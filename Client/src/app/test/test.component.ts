@@ -10,7 +10,7 @@ import { MessageDto } from '../models/message-dto.model';
 })
 export class TestComponent implements OnInit {
 
-  private baseUrl: string = "api/Test";  
+  private baseUrl: string = "api/Test";
   public responseMessage: string = "";
 
   constructor(private http: HttpClient) { }
@@ -21,7 +21,7 @@ export class TestComponent implements OnInit {
   }
 
   sendMessage() {
-    const message: MessageDto = { text: "hello" };// "hello";// { text: 'Hello, server!' };
+    const message: MessageDto = new MessageDto("testUser", "Hello server!");
     this.http.post(`${this.baseUrl}`, message, { responseType: 'text' }).pipe(
       map((response) => this.responseMessage = response),
       catchError((error) => this.responseMessage = error.message)

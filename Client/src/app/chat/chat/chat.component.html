@@ -5,7 +5,7 @@
     <div class="messages-container">
 
       <div *ngFor="let message of messages">
-        <p>{{ message.user }}: {{ message.text }}</p>
+        <p>{{ message.username }}: {{ message.text }}</p>
       </div>
 
     </div>
@@ -14,7 +14,7 @@
 
     <div class="input-container">
 
-      <textarea rows="2" [(ngModel)]="message.text" (keyup.enter)="sendMessage()"></textarea>
+      <textarea rows="3" [(ngModel)]="message.text" (keyup.enter)="sendMessage()"></textarea>
 
       <button mat-icon-button (click)="sendMessage()">
         <mat-icon>
